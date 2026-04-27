@@ -87,9 +87,37 @@ LingoFlux/
 - Telegram Bot API token (from BotFather)
 
 ### **Setup**
-1. Clone the repo: `git clone https://github.com/DarylAndrian/LingoFlux.git`
-2. Set up Supabase project (see `docs/PRD.md` for schema)
-3. Follow platform-specific setup in `backend/`, `mobile/`, `web/`, `bot/`
+
+**1. Clone the repo:**
+```bash
+git clone https://github.com/DarylAndrian/LingoFlux.git
+cd LingoFlux
+```
+
+**2. Set up Supabase:**
+- Go to: https://cgpmvpjwgormgkvrzsoc.supabase.co/project/api/sql
+- Open SQL Editor
+- Copy contents of `backend/supabase/migrations/001_initial_schema.sql`
+- Click "Run" to create tables + seed data
+
+**3. Backend setup:**
+```bash
+cd backend
+cp .env.example .env
+# Edit .env with your credentials (already filled for Supabase)
+npm install
+npm run dev
+```
+
+**4. Test connection:**
+```bash
+node test-connection.js
+```
+
+**5. Platform-specific setup:**
+- **Mobile:** See `mobile/README.md` (TBD)
+- **Web:** See `web/README.md` (TBD)
+- **Bot:** See `bot/README.md` (TBD)
 
 ---
 
