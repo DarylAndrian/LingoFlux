@@ -48,7 +48,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               child: ElevatedButton(
                 onPressed: () {
                   if (_currentPage == _pages.length - 1) {
-                    // Navigate to register/login
+                    // Navigate to MainScreen or show auth
+                    Navigator.of(context).pushReplacement(
+                      MaterialPageRoute(builder: (context) => const MainScreen()),
+                    );
                   } else {
                     _pageController.nextPage(
                       duration: const Duration(milliseconds: 300),

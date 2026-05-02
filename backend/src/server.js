@@ -14,7 +14,7 @@ const authRoutes = require('./routes/auth');
 const languageRoutes = require('./routes/languages');
 const wordRoutes = require('./routes/words');
 const translateRoutes = require('./routes/translate');
-const telegramRoutes = require('./routes/telegram');
+const { router: telegramRoutes } = require('./routes/telegram');
 
 // Use routes
 app.use('/api/v1/auth', authRoutes);
